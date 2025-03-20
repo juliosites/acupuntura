@@ -1,0 +1,269 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Schema from '../components/Schema.astro';
+
+const faqs = [
+  {
+    question: "O que é acupuntura?",
+    answer: "A acupuntura é uma técnica milenar da medicina tradicional chinesa que utiliza agulhas finas inseridas em pontos específicos do corpo para promover equilíbrio e saúde."
+  },
+  {
+    question: "A acupuntura dói?",
+    answer: "A maioria dos pacientes não sente dor durante o tratamento. As agulhas são extremamente finas e a sensação mais comum é de um leve formigamento ou peso no local."
+  },
+  {
+    question: "Quantas sessões são necessárias?",
+    answer: "O número de sessões varia de acordo com cada caso. Geralmente, resultados iniciais podem ser percebidos entre 4 a 8 sessões."
+  },
+  {
+    question: "Quais condições a acupuntura pode tratar?",
+    answer: "A acupuntura pode auxiliar no tratamento de diversas condições, incluindo dores crônicas, ansiedade, insônia, enxaqueca, problemas digestivos e muito mais."
+  }
+];
+
+const services = [
+  {
+    title: "Acupuntura Sistêmica",
+    description: "Tratamento completo com agulhas em pontos específicos do corpo para equilibrar a energia e promover a cura natural.",
+    whatsMsg: "Olá! Gostaria de saber mais sobre a Acupuntura Sistêmica."
+  },
+  {
+    title: "Acupuntura Auricular",
+    description: "Técnica focada em pontos específicos da orelha, eficaz para diversos tratamentos como ansiedade e controle do peso.",
+    whatsMsg: "Olá! Tenho interesse na Acupuntura Auricular."
+  },
+  {
+    title: "Moxaterapia",
+    description: "Tratamento que utiliza ervas medicinais aquecidas para estimular pontos de acupuntura e melhorar o fluxo de energia.",
+    whatsMsg: "Olá! Quero conhecer mais sobre a Moxaterapia."
+  },
+  {
+    title: "Moxabustão",
+    description: "Técnica terapêutica que combina calor e ervas medicinais para fortalecer o sistema imunológico.",
+    whatsMsg: "Olá! Gostaria de informações sobre Moxabustão."
+  },
+  {
+    title: "Ventosaterapia",
+    description: "Aplicação de ventosas para melhorar a circulação sanguínea e aliviar tensões musculares.",
+    whatsMsg: "Olá! Tenho interesse na Ventosaterapia."
+  },
+  {
+    title: "Auriculoterapia",
+    description: "Tratamento através de pontos específicos da orelha, auxiliando no equilíbrio físico e emocional.",
+    whatsMsg: "Olá! Quero saber mais sobre Auriculoterapia."
+  }
+];
+
+const testimonials = [
+  {
+    name: "Maria Silva",
+    photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150",
+    text: "A acupuntura mudou minha vida! Depois de anos sofrendo com dores crônicas, finalmente encontrei alívio com os tratamentos."
+  },
+  {
+    name: "João Santos",
+    photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150",
+    text: "Excelente tratamento para ansiedade e insônia. Os resultados foram surpreendentes desde as primeiras sessões."
+  }
+];
+---
+
+<Layout 
+  title="Acupuntura em Ribeirão Preto | Tratamento Natural e Eficaz"
+  description="Encontre tratamento de acupuntura profissional em Ribeirão Preto. Especialistas em dor crônica, estresse, ansiedade e bem-estar. Agende sua consulta!"
+>
+  <Schema />
+  
+  <!-- Hero Section -->
+  <section class="relative h-screen flex items-center justify-center">
+    <img
+      src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1920"
+      alt="Sala de tratamento de acupuntura"
+      class="absolute inset-0 w-full h-full object-cover"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative text-center text-white px-4">
+      <img
+        src="/logo.svg"
+        alt="Acupuntura Urbana"
+        class="w-64 mx-auto mb-8"
+        width="256"
+        height="77"
+      />
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        Acupuntura em Ribeirão Preto
+      </h1>
+      <p class="text-xl md:text-2xl mb-8">
+        Tratamento natural para sua saúde e bem-estar
+      </p>
+      <a
+        href="#contato"
+        class="bg-green-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-600 transition-colors"
+      >
+        Agende sua Consulta
+      </a>
+    </div>
+  </section>
+
+  <!-- Introdução -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">
+        Bem-vindo à Acupuntura Urbana
+      </h2>
+      <p class="text-lg text-gray-700 mb-6">
+        Em Ribeirão Preto, a <a href="https://acupunturaribeiraopreto.com.br" class="text-green-600 hover:underline">Acupuntura Urbana</a> se destaca como referência em tratamentos naturais e eficazes. Nossa abordagem integra técnicas milenares da medicina tradicional chinesa com práticas modernas, proporcionando resultados excepcionais para nossos pacientes.
+      </p>
+      <p class="text-lg text-gray-700">
+        Localizada no coração de <a href="https://acupunturaribeiraopreto.com.br/sobre" class="text-green-600 hover:underline">Ribeirão Preto</a>, nossa clínica oferece um ambiente acolhedor e profissionais altamente qualificados, prontos para cuidar da sua saúde de forma natural e holística.
+      </p>
+    </div>
+  </section>
+
+  <!-- Serviços Section -->
+  <section class="py-20 bg-gray-50" id="servicos">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+        Nossos Serviços
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((service) => (
+          <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+            <h3 class="text-xl font-semibold mb-4">{service.title}</h3>
+            <p class="text-gray-600 mb-6">{service.description}</p>
+            <div class="flex justify-center">
+              <a
+                href={`https://wa.me/5516999999999?text=${encodeURIComponent(service.whatsMsg)}`}
+                class="inline-block bg-green-500 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-green-600 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Saiba Mais
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefícios Section -->
+  <section class="py-20 bg-white" id="beneficios">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+        Benefícios da Acupuntura
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center p-6 bg-gray-50 rounded-lg">
+          <img
+            src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&w=500"
+            alt="Redução de dor"
+            class="w-full h-48 object-cover rounded-lg mb-4"
+          />
+          <h3 class="text-xl font-semibold mb-2">Redução de Dor</h3>
+          <p class="text-gray-600">
+            Alívio eficaz para dores crônicas e agudas em diferentes partes do corpo.
+          </p>
+        </div>
+        <div class="text-center p-6 bg-gray-50 rounded-lg">
+          <img
+            src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=500"
+            alt="Redução de estresse"
+            class="w-full h-48 object-cover rounded-lg mb-4"
+          />
+          <h3 class="text-xl font-semibold mb-2">Redução do Estresse</h3>
+          <p class="text-gray-600">
+            Promove relaxamento e equilíbrio emocional, reduzindo ansiedade e estresse.
+          </p>
+        </div>
+        <div class="text-center p-6 bg-gray-50 rounded-lg">
+          <img
+            src="https://images.unsplash.com/photo-1512438248247-f0f2a5a8b7f0?auto=format&fit=crop&w=500"
+            alt="Bem-estar geral"
+            class="w-full h-48 object-cover rounded-lg mb-4"
+          />
+          <h3 class="text-xl font-semibold mb-2">Bem-estar Geral</h3>
+          <p class="text-gray-600">
+            Melhora da qualidade do sono, digestão e sistema imunológico.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos Section -->
+  <section class="py-20 bg-gray-50" id="depoimentos">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+        O que Nossos Pacientes Dizem
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        {testimonials.map((testimonial) => (
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <div class="flex items-center mb-4">
+              <img
+                src={testimonial.photo}
+                alt={testimonial.name}
+                class="w-16 h-16 rounded-full object-cover mr-4"
+                width="64"
+                height="64"
+              />
+              <h3 class="text-xl font-semibold">{testimonial.name}</h3>
+            </div>
+            <p class="text-gray-600 italic">"{testimonial.text}"</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-20 bg-white" id="faq">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+        Perguntas Frequentes
+      </h2>
+      <div class="max-w-3xl mx-auto space-y-6">
+        {faqs.map((faq) => (
+          <details class="bg-gray-50 p-6 rounded-lg shadow-sm">
+            <summary class="text-lg font-semibold cursor-pointer">
+              {faq.question}
+            </summary>
+            <p class="mt-4 text-gray-600">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato Section -->
+  <section class="py-20 bg-gray-50" id="contato">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+        Entre em Contato
+      </h2>
+      <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-sm">
+        <div class="text-center mb-8">
+          <p class="text-xl text-gray-600">
+            Agende sua consulta ou tire suas dúvidas
+          </p>
+          <p class="text-2xl font-semibold mt-4">
+            (16) 99999-9999
+          </p>
+        </div>
+        <div class="text-center">
+          <a
+            href="https://wa.me/5516999999999?text=Olá! Gostaria de agendar uma consulta."
+            class="inline-block bg-green-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-green-600 transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Agendar Consulta
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
