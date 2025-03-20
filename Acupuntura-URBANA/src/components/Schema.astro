@@ -1,0 +1,41 @@
+---
+const businessSchema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Acupuntura Urbana",
+  "image": "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Example, 123",
+    "addressLocality": "Ribeirão Preto",
+    "addressRegion": "SP",
+    "postalCode": "14000-000",
+    "addressCountry": "BR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -21.1767,
+    "longitude": -47.8208
+  },
+  "url": "https://acupunturaurbana.com.br",
+  "telephone": "+551699999999",
+  "priceRange": "$$",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "medicalSpecialty": "Acupuncture"
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
